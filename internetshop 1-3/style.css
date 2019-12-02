@@ -1,0 +1,152 @@
+body {
+
+background-color: #DDE6FF;
+}
+h1 {
+color: #000000;
+font-size: 18px;
+font-weight: 400;
+}
+header {
+font-style: Helvetica;
+font-size: 20px;
+color: #000000;
+}
+
+li {
+ list-style-type: none;
+}
+
+#first{
+  font-color: #292928;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 16px;
+}
+
+#t{
+  font-color: #484343;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; 
+  text-align: left;
+}
+
+.main {
+  font-color: #760709;
+  font-size: 25px;
+  font-style: Ubuntu;
+  list-style-type: none;
+  list-style-image:url('book.jpg');
+  padding-left: 35px;
+}
+
+
+
+input, select {
+   width: 200px;
+   height: 40px;
+   font-color: #760709;
+   font-size: 15px;
+}
+
+.border{
+ border: 3px solid #00af64;
+}
+
+.border:hover{
+  border: none;
+  padding: 3px; 
+}
+ 
+
+
+fieldset{
+  background-color: #F8F5F5;
+}
+
+
+
+li a:hover {
+ color: #800000;
+text-decoration: underline;
+}
+
+
+.header{
+  width: 100%'
+  max-width: 1024px;
+  padding: 0 15px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo {
+  float: left;
+  }
+
+
+
+nav ul { 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  left: 50%;
+  float: left;
+  position: relative;
+ 
+}
+
+nav ul li {
+    display: block;
+    float: left;
+    list-style:none;
+    margin:0;
+    padding:0;
+    position:relative;
+    left: -50%;
+    
+}
+
+nav a {
+  display: block;
+  padding: 13px  150px ;
+  text-decoration: none;
+  
+}
+
+
+.container:after {
+  contentL "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+
+#wow:focus{
+    background-color: navy; 
+    color: #930;
+}
+
+input{
+  text-transform: capitalize;
+}
+
+p:first-letter  {
+  font-style: Pobeda;
+  font-size: 40px;
+}
+
+
+
+.tablet {
+  height: 50;
+}
