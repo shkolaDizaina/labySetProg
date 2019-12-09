@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Форма</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <div class="column is-6 is-offset-3">
+        <a class="button is-link is-rounded is-fullwidth" href="/">На главную</a>
+        <div class="content">
+
+        <form action="" class="column is-8 is-offset-2" onsubmit="return validate()">
+            <div class="field is-horisontal">
+                <label class="label">Логин</label>
+                <div class="control has-icons-left">
+                    <input class="input field-login" type="text" placeholder="Имя пользователя" value="">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+                <p class="help is-danger login-error-msg is-hidden">Логин должен содержать как минимум 1 символ, не
+                    более 50
+                    символов</p>
+            </div>
+            <div class="field">
+                <label class="label">Пароль</label>
+                <p class="control has-icons-left">
+                    <input class="input field-pass" type="password" placeholder="Пароль">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+                <p class="help is-danger pass-error-msg is-hidden">Пароль должен содержать как минимум 5 символов, не
+                    более 50
+                    символов</p>
+            </div>
+            <div class="field">
+                <label class="label">Повтор пароля</label>
+                <p class="control has-icons-left">
+                    <input class="input field-pass-confirm" type="password" placeholder="Повтор пароля">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+                <p class="help is-danger pass-confirm-error-msg is-hidden">Пароли не совпадают</p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-success is-fullwidth" type="submit">
+                        Войти
+                    </button>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <script src=" js/source.js"> </script>
+</body>
+
+</html>
