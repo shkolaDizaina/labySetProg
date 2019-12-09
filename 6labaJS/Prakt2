@@ -1,0 +1,241 @@
+1
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 1</title>
+</head>
+<body>
+
+	<h3>Задание 1</h3>
+	<h4>Почему код дает именно такие результаты?</h4>
+	<pre>var a = 1, b = 1, c, d;
+	c = ++a; alert(c);           // 2 - присваивание предудущего числа переменной, потом увеличение на 1, запись увеличенного числа в переменную
+	d = b++; alert(d);           // 1 - присваивание предудущего числа переменной, потом увеличение на 1, увеличенное число будет использовано при следующем вызове переменной
+	c = (2+ ++a); alert(c);      // 5 - сложение: 2 + 3
+	d = (2+ b++); alert(d);      // 4 - сложение: 2 + 2 (переменная увеличена, но результат в нее будет записан только при следующем обращении)
+	alert(a);                    // 3 - переменная a была дважды увеличена на 1 в первой и третьей строчках
+	alert(b);                    // 3 - отображается результат от предудущего увеличения на 1 единицу
+	</pre>
+	<br><br><a href="/index.php">На главную</a>
+</body>
+</html>
+
+2
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 2</title>
+</head>
+<body>
+
+	<h3>Задание 2</h3>
+	<h4>Чему будет равен x?</h4>
+	<pre>
+		var a = 2;
+		var x = 1 + (a *= 2);  //Ответ = 5
+	</pre>
+	<br><br><a href="/index.php">На главную</a>
+</body>
+</html>
+
+
+3
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 3</title>
+</head>
+<body>
+
+	<h3>Задание 3</h3>
+	<h4>Объявить две целочисленные переменные — a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу: если a и b положительные, вывести их разность; если а и b отрицательные, вывести их произведение; если а и b разных знаков, вывести их сумму; Ноль можно считать положительным числом.</h4>
+	<input type="text" name="a_ch" id="a_ch" placeholder="a">
+	<input type="text" name="b_ch" id="b_ch" placeholder="b">
+	<input type="submit" name="a_b_ch" id="a_b_ch" value="Получить результат">
+	<script>
+		window.onload = function () {
+		    var cli = document.getElementById('a_b_ch');
+		    cli.addEventListener("click", to_f);
+			function to_f(){
+				var a = parseInt(document.getElementById('a_ch').value);
+				var b = parseInt(document.getElementById('b_ch').value);
+				if (a >= 0 && b >= 0)
+					alert("Разность = " + (a - b) );
+				else if (a < 0 && b < 0)
+					alert("Произведение = " + (a * b) );
+				else if ( (a >= 0 && b < 0) || (a < 0 && b >= 0) )
+					alert("Сумма = " + (a + b) );
+			}
+		}
+	</script>
+	<br><br><a href="/index.php">На главную</a>
+</body>
+</html>
+        
+        
+4
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 4</title>
+</head>
+<body>
+
+		<h3>Задание 4</h3>
+	<h4>Реализовать четыре основные арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.</h4>
+	
+	<input type="text" name="a_ch_2" id="a_ch_2" placeholder="a">
+	<input type="text" name="b_ch_2" id="b_ch_2" placeholder="b">
+	<input type="submit" name="a_b_ch_2" id="a_b_ch_2" value="Получить результат">
+	<script>
+	window.onload = function () {
+	    var cli = document.getElementById('a_b_ch_2');
+	    cli.addEventListener("click", to_f);
+	    function sum (a, b){
+			return a + b;
+		}
+		function diff (a, b){
+			return a - b;
+		}
+		function mult (a, b){
+			return a * b;
+		}
+		function division (a, b){
+			return a / b;
+		}
+	    function to_f(){
+	    	var a = parseInt(document.getElementById('a_ch_2').value);
+			var b = parseInt(document.getElementById('b_ch_2').value);
+	    	alert("Сумма = " + sum(a, b) + ", разность = " + diff(a, b) + ", произведение = " + mult(a, b) + ", отношение = " + division(a, b));
+	    }
+	}
+	</script>
+	<br><br><a href="/index.php">На главную</a>
+</body>
+</html>
+      
+      
+5
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 5</title>
+</head>
+<body>
+
+	<h3>Задание 5</h3>
+	<h4>Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 — значения аргументов, operation — строка с названием операции. В зависимости от переданного значения выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (применить switch).</h4>
+	
+	<input type="text" name="a_ch_3" id="a_ch_3" placeholder="a">
+	<input type="text" name="b_ch_3" id="b_ch_3" placeholder="b">
+	<input type="text" name="oper" id="oper" placeholder="Название операции">
+	<input type="submit" name="a_b_ch_3" id="a_b_ch_3" value="Получить результат">
+	<script>
+	window.onload = function () {
+	    var cli = document.getElementById('a_b_ch_3');
+	    cli.addEventListener("click", to_f);
+	    function mathOperation(arg1, arg2, operation){
+	    	switch (operation) {
+				case "сумма":
+				    return("Сумма = " + sum(arg1, arg2));
+				    break;
+				case "разность":
+				    return("Разность = " + diff(arg1, arg2));
+				    break;
+				default:
+				    return( "Неизвестная операция!" );
+				    break;
+			}
+	    }
+	    function sum (a, b){
+			return a + b;
+		}
+		function diff (a, b){
+			return a - b;
+		}
+	    function to_f(){
+	    	var a = parseInt(document.getElementById('a_ch_3').value);
+			var b = parseInt(document.getElementById('b_ch_3').value);
+			var op = document.getElementById('oper').value;
+			
+	    	alert(mathOperation(a, b, op));
+	    }
+	}
+	</script>
+	<br><br><a href="/index.php">На главную</a>
+	
+</body>
+</html>
+
+
+6
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 6</title>
+</head>
+<body>
+
+	<h3>Задание 6</h3>
+	<h4>* С помощью рекурсии организовать функцию возведения числа в степень. Формат: function power(val, pow), где val — заданное число, pow –— степень.</h4>
+	
+	<input type="text" name="ch" id="ch" placeholder="Число">
+	<input type="text" name="step" id="step" placeholder="Степень">
+	<input type="submit" name="ch_step" id="ch_step" value="Возвести число в степень">
+	<script>
+		window.onload = function () {
+		    var cli = document.getElementById('ch_step');
+		    cli.addEventListener("click", to_f);
+		    function power(val, pow){
+		    	var result = val * val;
+			    if (pow > 2) {
+			        result = val * power(val, pow - 1);
+			    }
+			    return result;
+		    }
+	    	
+		    function to_f(){
+		    	var ch = parseInt(document.getElementById('ch').value);
+				var step = parseInt(document.getElementById('step').value);
+				
+		    	alert(power(ch, step));
+		    }
+		}
+	</script>
+	<br><br><a href="/index.php">На главную</a>
+</body>
+</html>
+
+
+7
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 7а</title>
+</head>
+<body>
+
+	<h3>Задание 7</h3>
+	<h4>Написать функцию для проверки пароля. На вход должен подаваться аргумент path – строка с паролем.</h4>
+	
+	<input type="text" name="pass" id="pass" placeholder="Пароль">
+	<input type="submit" name="check_pass" id="check_pass" value="Сравнить">
+	<script>
+	window.onload = function () {
+	    var cli = document.getElementById('check_pass');
+	    cli.addEventListener("click", to_f);
+	    function to_f(){
+	    	var pass = document.getElementById('pass').value;
+	    	if ( (pass.length >= 3 && pass.length <= 12) 
+	    		&& (pass.indexOf("&") != -1 || pass.indexOf("$") != -1 || pass.indexOf("%") != -1 || pass.indexOf("*") != -1) 
+	    		&& (pass.lastIndexOf("q") == 0 || pass.lastIndexOf("z") == (pass.length)-1 ) ){
+	    		alert("Корректный пароль");
+	    	}else{
+	    		alert("Некорректный пароль");
+	    	}
+	    }
+	}
+	</script>
+	<br><br><a href="/index.php">На главную</a>
+</body>
+</html>
