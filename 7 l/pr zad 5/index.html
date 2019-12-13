@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 40px auto;
+    }
+
+    .left {
+        width: 70%;
+        float: left;
+    }
+
+
+
+    h1 {
+        margin-bottom: 40px;
+    }
+
+
+
+    #field {
+        width: 320px;
+        height: 320px;
+        box-sizing: content-box;
+        border: 1px solid black;
+    }
+
+    #field::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .chess-block {
+        width: 40px;
+        height: 40px;
+        float: left;
+    }
+
+    .bg-black {
+        background: #525252;
+    }
+
+    .
+</style>
+<body>
+<div class="container">
+    <div class="left">
+        <h1 class="text-center">Шахматная доска</h1>
+        <div id="field"></div>
+
+    </div>
+</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
