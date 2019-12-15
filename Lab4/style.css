@@ -1,0 +1,110 @@
+.Header{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./img/Rectangle.png") no-repeat;
+    background-size: cover;
+    height: 500px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 0!important;
+}
+.Tagline{
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.Text{
+    text-align: center;
+}
+.Button{
+    background: #4985FF;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 30px;
+    width: 200px;
+    height: 45px;
+    margin: auto;
+}
+.Title{
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+menu{
+    display: inline-flex;
+}
+.Menu{
+    list-style: none;
+    padding: 0!important;
+}
+.MenuItem{
+    display: inline-flex;
+}
+hr{
+    opacity: 0.5;
+    border: 1px solid #A1A1A1;
+}
+.Footer{
+    background: #F6F6F8;
+    height: 413px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #999999;
+}
+.FooterContent{
+}
+.Topic{
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+
+}
+.Arrow{
+    list-style: outside url("./img/arrow.png");
+}
+.Phone{
+    list-style: outside url("./img/phone.png");
+}
+.Location{
+    list-style: outside url("./img/location.png");
+}
+.Message{
+    list-style: outside url("./img/message.png");
+}
+.Body{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #999999;
+}
+.BodyContainer{
+    display: flex;
+    flex-direction: column;
+}
+.BodyContent{
+    display: flex;
+    justify-content: center;
+}
+.BodyText{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.BodyTextTitle{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 53px;
+    color: #323232;
+}
+.BodyImg{
+    width: 500px;
+    height: 400px;
+    background: url("./img/Rectangle 2.png");
+    border-radius: 30px;
+}
